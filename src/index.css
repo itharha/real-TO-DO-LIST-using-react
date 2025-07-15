@@ -1,0 +1,301 @@
+body{
+
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment:fixed;
+/*for make my div in the center of page*/
+  display: flex;
+  justify-content: center;   /* توسيط أفقي */
+  align-items: center;
+margin:0;
+padding: 8px;
+}
+.title{
+ 
+  font-family: "italic";
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-shadow: 1px 2px 4px red;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.container{
+display: flex;
+  margin-top:40px;
+
+   flex-direction: column;
+  box-shadow: 0 0 10px rgb(242, 3, 3);
+  border: 5px solid rgb(17, 79, 130);
+width:60vw;
+height: 100%;
+
+   animation: fadeRotate 1.5s ease-in-out;
+}
+
+@keyframes fadeRotate {
+  0% {
+    transform: rotate(-3deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+
+.input-list{
+ /* ياخد طول الشاشة */
+justify-content: center; /* توسيط أفقي */
+  align-items: center;     /* توسيط عمودي */
+  display: flex;
+  margin-top:10px;
+  text-align: center;
+}
+input[type="text"]{
+ width: 90%;
+max-width: 400px;
+    height: 29px;
+    padding: 3px;
+    border-radius: 25px;
+    background-color: hsl(180, 100%, 100%);
+    color: rgb(0, 0, 0);
+    box-shadow: 3px 1px 8px 6px  rgb(18, 18, 18);
+    margin-left: 4px;
+}
+input[type="text"]:focus{
+    background-color: #b9bab9;
+
+}
+.action-button{
+    width:100px;
+    height:45px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 3px 1px 8px 2px  rgb(18, 18, 18);
+}
+.action-button:hover{
+background-color: hsl(180, 1%, 84%);
+}
+button{
+    width:30px ;
+    height:25px;
+    margin:3px;
+    padding: 2px;
+    border-radius: 8px;
+  font-weight: bold;
+    transition: 0.2s;
+
+}
+
+li{
+
+    font-size: 1.6rem;
+    margin:2px;
+    padding: 2px;       
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 3px;
+    margin-right: 90px;
+    display: flex;
+  
+ 
+   
+}
+ul{
+ max-height: auto; /* عادي حسب المحتوى */
+  overflow-y: visible; /* خليه يهبط */
+  padding: 0;
+    min-height: 300px;     /* دايمًا عندها ارتفاع ثابت */
+
+
+}
+ .text  {  /* hadi ltseprina list ela button autmtquiment*/
+flex:1;
+ }
+
+
+.delete-button ,.move-button,.update-button{
+    margin-left:5px;
+}
+.delete-button{
+    background-color: #767575;
+}
+.delete-button:hover{
+    background-color: #565454;
+}
+.move-button{
+background-color: #7fa9ed;
+padding: 1px;
+}
+.move-button:hover{
+background-color: #415a81;
+
+}
+.update-button{
+    background-color: #929692;
+}
+.update-button:hover{
+    background-color: #6b6d6b;
+}
+.mark-button{
+    width:20px;
+    height:20px;
+}
+
+.completed {
+
+   text-decoration: line-through;
+  color: hsl(300, 1%, 25%);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.02); 
+
+}
+.filter-button{
+    display: flex;
+    justify-content: center;
+margin-top: 7px;
+    align-items: center;
+    padding: 10px;
+gap:20px;
+}
+
+.selected {
+  background-color: #e1ec05d3;
+  color: white;
+  font-weight: bold;
+}
+
+.active{
+      background-color: #ff0202;
+}
+.done{
+     background-color: #05f479;
+  color: white;
+  font-weight: bold;
+
+
+}
+.date-update {
+  margin-top: 6px;
+padding-left: 34px;
+  display: block;
+}
+
+.date {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.toggle-container{
+  position: absolute;
+  top: 5px;
+ right: 5px;
+  z-index: 1000; /* باش يطلع فوق */
+}
+.toggle-btn{
+    width:80px;
+    height:40px;
+    box-shadow: 2px 2px 9px 4px #918f8f;
+      transition: 0.3s;
+     padding: 3px;
+     border-radius: 20px;
+     /* */
+  transition: transform 0.3s ease-in-out;
+}
+   /* */
+.toggle-btn:hover {
+  transform: rotate(20deg);
+}
+body.light {
+  background: linear-gradient(145deg, #f8f9fa, #e4ecf2); /* خلفية لونية ناعمة */
+  color: #2c3e50;
+  transition: 0.3s;
+}
+body.dark {
+  background: linear-gradient(145deg, #1c1c1c, #2d2d2d); /* رمادي أنيق مع عمق */
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+   /* */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+   /* */
+li {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
+
+
+/* For small screens: phones */
+@media (max-width: 500px) {
+  .container {
+    width: 90vw;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .input-list input[type="text"] {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .action-button {
+    width: 80px;
+    height: 35px;
+  }
+
+  button {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  li {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .date-update {
+    padding-left: 0;
+    font-size: 0.7rem;
+    margin-top: 4px;
+  }
+
+  .toggle-btn {
+    width: 65px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Medium screens: tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 75vw;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .toggle-btn {
+    width: 75px;
+    height: 35px;
+  }
+}
